@@ -43,6 +43,13 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
                     <span id="availability-light" className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors animate-pulse-green"></span>
                     <span id="availability-text" className="text-xs sm:text-sm text-gray-100">Open to work</span>
                 </div>
+
+                {/* Mobile Nav Button */}
+                <div className="md:hidden">
+                    <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+                    </button>
+                </div>
             </div>
             
             {/* Mobile Menu */}
